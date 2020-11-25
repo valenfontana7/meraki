@@ -1,0 +1,89 @@
+.formPage {
+  font-family: "Lato";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 150px;
+}
+.container {
+  width: 90%;
+  background: #fde195;
+  margin: 0 20px 0 20px;
+  display: flex;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0.3px 0.3px 1px grey;
+}
+.form {
+  height: 250px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 200px;
+}
+.form input {
+  border-style: none;
+  height: 35px;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+.form textarea {
+  border-style: none;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+.name {
+  display: flex;
+  flex-direction: column;
+  width: 170px;
+  margin: 5px;
+}
+.categories {
+  display: flex;
+  flex-direction: column;
+  width: 170px;
+  margin: 5px;
+}
+.description {
+  display: flex;
+  flex-direction: column;
+  width: 170px;
+  margin: 5px;
+}
+.price {
+  display: flex;
+  flex-direction: column;
+  width: 170px;
+  margin: 5px;
+}
+.stock {
+  display: flex;
+  flex-direction: column;
+  width: 170px;
+  margin-left: 5px;
+}
+.botonAdd {
+  border-style: none;
+  margin: 20px 0px 0px 30px;
+  background: #f7a14c;
+  border-radius: 10px;
+  width: 100px;
+  box-shadow: 0.3px 0.3px 1px rgb(68, 68, 68);
+  color: white;
+}
+.botonBack {
+  border-style: none;
+  border-radius: 10px;
+  height: 30px;
+  box-shadow: 0.3px 0.3px 1px rgb(61, 61, 61);
+  background: white;
+}
+.upload {
+  margin-right: 50px;
+}
+.upload h3 {
+  margin-left: 70px;
+  margin-bottom: 20px;
+}

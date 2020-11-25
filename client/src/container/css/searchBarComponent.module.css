@@ -1,0 +1,134 @@
+/**Componente entero**/
+.bar {
+  width: 105%;
+  height: 63px;
+  background: #fffedd;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  padding: 0px 0 0 6px;
+  box-shadow: 0.3px 0.3px 1.5px rgb(83, 83, 83);
+}
+/**Boton**/
+.boton {
+  width: 42px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 50px;
+  border-style: none;
+  box-shadow: 0.3px 0.3px 1.5px rgb(83, 83, 83);
+  background: white;
+  margin-left: 10px;
+}
+
+.search {
+  width: 240px;
+  height: 40px;
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  border-style: none;
+  box-shadow: 0.3px 0.3px 1.5px rgb(83, 83, 83);
+  border-width: 0.8px;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  margin-left: 15px;
+  margin-top: 2px;
+}
+.search:focus {
+  box-shadow: 0.3px 0.3px 2px rgb(0, 0, 0);
+}
+
+@media (max-width: 576px) {
+  /**Componente entero**/
+  .bar {
+    width: 105%;
+    height: 45px;
+    background: #f8e4ab;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    padding: 0px 0 0 6px;
+    box-shadow: 0.3px 0.3px 1.5px rgb(83, 83, 83);
+    font-size: 15px;
+  }
+  /**Boton**/
+  .boton {
+    width: 28px;
+    height: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50px;
+    border-style: none;
+    box-shadow: 0.3px 0.3px 1.5px rgb(83, 83, 83);
+    background: white;
+    margin-left: 5px;
+    margin-top: 2px;
+  }
+  .btnImage {
+    max-width: 18px;
+  }
+
+  .search {
+    width: 160px;
+    height: 29px;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    border-style: none;
+    box-shadow: 0.3px 0.3px 1.5px rgb(83, 83, 83);
+    border-width: 0.8px;
+    padding-left: 10px;
+    margin-left: 10px;
+  }
+  .search:focus {
+    box-shadow: 0.3px 0.3px 2px rgb(0, 0, 0);
+  }
+}
+@media (max-width: 360px) {
+  /**Componente entero**/
+  .bar {
+    width: 110%;
+    height: 35px;
+    background: #f8e4ab;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    padding: 0px 0 0 6px;
+    box-shadow: 0.3px 0.3px 1.5px rgb(83, 83, 83);
+    font-size: 10px;
+  }
+  /**Boton**/
+  .boton {
+    width: 23px;
+    height: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50px;
+    border-style: none;
+    box-shadow: 0.3px 0.3px 1.5px rgb(83, 83, 83);
+    background: white;
+    margin-left: 0px;
+    margin-top: 2px;
+  }
+  .btnImage {
+    max-width: 13px;
+  }
+
+  .search {
+    width: 90px;
+    height: 23px;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    border-style: none;
+    box-shadow: 0.3px 0.3px 1.5px rgb(83, 83, 83);
+    border-width: 0.8px;
+    padding-left: 5px;
+    margin-left: 5px;
+  }
+  .search:focus {
+    box-shadow: 0.3px 0.3px 2px rgb(0, 0, 0);
+  }
+}

@@ -1,0 +1,160 @@
+.card {
+  width: 250px;
+  height: 350px;
+  background: rgb(255, 237, 189);
+  border-radius: 3px;
+  transition: box-shadow 0.5s;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px grey;
+}
+.card:hover {
+  box-shadow: 2px 2px 2px 2px grey;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.image img {
+  width: 250px;
+  height: 220px;
+}
+.productData {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-right: 15px;
+}
+.productData span:first-of-type {
+  padding-top: 3px;
+  font-size: 24px;
+  font-weight: 400;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: rgb(17, 17, 17);
+}
+.stockIcon {
+  margin-left: 6px;
+  color: rgb(255, 255, 255);
+  background: rgb(80, 53, 22);
+  padding: 0 0.4px 0 0.4px;
+}
+.stock {
+  display: inline-flex;
+  margin-left: 11.8rem;
+  padding-top: 2rem;
+}
+.price {
+  color: rgb(17, 94, 30);
+  font-size: 16px;
+  border-radius: 2px;
+  font-family: "Lato";
+}
+.carrito {
+  width: 30px;
+  height: 30px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -25px 0 0 185px;
+  padding: 20px;
+  border-style: solid;
+  border-width: 0.2px;
+  border-color: grey;
+  border-radius: 10px;
+}
+.carrito:hover {
+  box-shadow: 0.5px 0.5px 0.5px 0.5px grey;
+}
+.carrito img {
+  width: 20px;
+  height: 20px;
+}
+.carrito button {
+  border: none;
+  outline-style: none;
+  background: white;
+}
+@media (max-width: 576px) {
+  .card {
+    width: 126px;
+    height: 200px;
+    background: rgb(255, 237, 189);
+    border-radius: 3px;
+    transition: box-shadow 0.5s;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px grey;
+  }
+  .card:hover {
+    box-shadow: 1px 1px 1px 1px grey;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  .image img {
+    width: 126px;
+    height: 120px;
+  }
+  .productData {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3px;
+    padding-right: 11px;
+  }
+  .productData span:first-of-type {
+    padding-top: 1px;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    color: rgb(17, 17, 17);
+  }
+  .stockIcon {
+    margin-left: 6px;
+    color: rgb(255, 255, 255);
+    background: rgb(80, 53, 22);
+    padding: 0 0.4px 0 0.4px;
+  }
+  .stock {
+    display: inline-flex;
+    margin-left: 11.8rem;
+    padding-top: 2rem;
+  }
+  .price {
+    color: rgb(17, 94, 30);
+    font-size: 12px;
+    border-radius: 2px;
+    font-family: "Lato";
+  }
+  .carrito {
+    width: 20px;
+    height: 20px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -10px 0 0 95px;
+    padding: 10px;
+    border-style: none;
+    box-shadow: 0.5px 0.5px 0.5px rgb(0, 0, 0);
+    border-radius: 10px;
+  }
+  .carrito:hover {
+    box-shadow: 0.3px 0.3px 1px rgb(0, 0, 0);
+  }
+  .carrito img {
+    width: 10px;
+    height: 10px;
+  }
+  .carrito button {
+    border: none;
+    outline-style: none;
+    background: white;
+    border-radius: 5px;
+  }
+  .nostock {
+    font-size: 10px;
+  }
+}
