@@ -3,7 +3,7 @@
   border-bottom: 1px dotted #ccc;
   cursor: pointer;
   padding: 20px;
-  background: #fde195;
+  background: #fffedd;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   border-radius: 10px;
@@ -24,7 +24,7 @@
   padding-top: 6px;
 }
 .buttonNew {
-  background: #fcb064;
+  background:#d793f7;
   border-style: none;
   border-radius: 10px;
   color: white;
@@ -36,7 +36,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #fde195;
+  background: #ffebb4;
   margin-right: 7px;
   border-radius: 7px;
   border-style: none;
@@ -51,7 +51,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgb(247, 161, 76);
+  background: #d793f7;
   border-radius: 7px;
   border-style: none;
   font-size: 17px;
@@ -138,146 +138,4 @@
   padding: 30px;
   font-size: 25px;
   font-weight: 300;
-}
-
-@media (max-width: 576px) {
-  .products {
-    margin-top: 30px;
-    border-bottom: 1px dotted #ccc;
-    cursor: pointer;
-    padding: 10px;
-    background: #fde195;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-      "Lucida Sans", Arial, sans-serif;
-    font-size: 12px;
-    border-radius: 10px;
-    margin-right: 0px;
-    margin-left: 0px;
-  }
-  .actionpane {
-    padding-bottom: 10px;
-    border-radius: 10px;
-  }
-
-  .botones {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-  .buttonNew {
-    background: #fcb064;
-    border-style: none;
-    border-radius: 10px;
-    color: white;
-  }
-  .editar {
-    width: 50px;
-    height: 25px;
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #fde195;
-    border-radius: 7px;
-    border-style: none;
-    font-size: 10px;
-    box-shadow: 0.3px 0.3px 1.3px rgb(0, 0, 0);
-    color: rgb(83, 83, 83);
-  }
-  .borrar {
-    width: 50px;
-    height: 25px;
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgb(247, 161, 76);
-    border-radius: 7px;
-    border-style: none;
-    font-size: 10px;
-    box-shadow: 0.3px 0.3px 1.3px rgb(0, 0, 0);
-    color: white;
-  }
-  .carritoPage {
-    width: 100%;
-    height: 100%;
-    border-style: solid;
-    border-radius: 10px;
-    border-width: 0.5px;
-    background-color: #f8e4ab;
-  }
-  .titulo {
-    font-weight: 600;
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-    font-size: 48px;
-    color: rgb(255, 255, 255);
-    -webkit-text-stroke: 1px rgb(20, 20, 20);
-  }
-  .cards {
-    width: 100%;
-    height: 200px;
-    background: rgb(255, 255, 255);
-    margin: 10px 0 0 0;
-    display: flex;
-  }
-  .cardImage {
-    width: 200px;
-    height: 200px;
-  }
-  .cardDet {
-    font-weight: 300;
-    display: flex;
-    align-items: center;
-    margin: 0 0 0 30px;
-  }
-  .cardPrice {
-    display: inline-block;
-    position: absolute;
-    left: 90%;
-    margin-top: 4%;
-    flex-direction: column;
-    font-size: x-large;
-    font-weight: 300;
-  }
-  .qty input {
-    width: 60px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-  }
-  .qty {
-    position: static;
-    margin: auto;
-    margin-top: 4%;
-  }
-  .button {
-    width: 80px;
-    height: 35px;
-    margin-top: 8px;
-  }
-  .footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 30px;
-    font-size: 25px;
-    font-weight: 300;
-  }
-  .catalogo {
-    display: flex;
-    justify-content: center;
-  }
-  .footer button {
-    width: 180px;
-  }
-
-  .footerdos {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 30px;
-    font-size: 25px;
-    font-weight: 300;
-  }
 }

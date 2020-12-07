@@ -20,9 +20,8 @@ function HeaderInicio() {
           &#9776;
         </button>
         <div className={hInicio.brand}>
-          <a href="/">Meraki</a>
-          <a href="/">Cosmética</a>
-          <a href="/">Natural</a>
+          <a href="/">MERAKI</a>
+          <a href="/">COSMÉTICA NATURAL AYÚRVEDA</a>
         </div>
         <Link
           to={{

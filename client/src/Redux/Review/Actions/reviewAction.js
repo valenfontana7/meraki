@@ -1,66 +1,41 @@
 import axios from "axios";
 import {
-  ADD_REVIEW,
-  UPDATE_REVIEW,
-  GET_REVIEWS,
-  DELETE_REVIEW,
-  GET_REVIEWS_REQUEST,
-  UPDATE_RATING,
+  ADD_COMMENT,
+  GET_COMMENTS,
+  DELETE_COMMENT,
+  GET_COMMENTS_REQUEST
 } from "../Constants/reviewConstants";
 
-const deleteReview = (reviewId, productId) => async (dispatch) => {
+const deleteComment = (commentId) => async (dispatch) => {
   await axios
-    .delete(`http://localhost:3001/products/${productId}/review/${reviewId}`)
+    .delete(`/products/comment/${commentId}`)
     .then((res) => {
       return res;
     });
-  dispatch({ type: DELETE_REVIEW, payload: reviewId });
+  dispatch({ type: DELETE_COMMENT, payload: commentId });
 };
 
-const setReview = (productId, review) => async (dispatch) => {
-  await axios
-    .post(`http://localhost:3001/products/${productId}/review`, {
-      title: `${review.title}`,
-      description: `${review.description}`,
-      star: `${review.star}`,
-      idUser: JSON.parse(localStorage.getItem("user")).id,
-    })
-    .then((data) => {
-      dispatch({ type: ADD_REVIEW, payload: data.data });
-      return data;
-    });
-};
-
-const updateReview = (productId, review) => async (dispatch) => {
-  await axios
-    .put(`http://localhost:3001/products/${productId}/review/${review.id}`, {
-      title: `${review.title}`,
-      description: `${review.description}`,
-      star: `${review.star}`,
-    })
-    .then((data) => {
-      console.log(data.data);
-      dispatch({ type: UPDATE_REVIEW, payload: data.data });
-      return data;
-    });
-  return window.history.back();
-};
-
-const setRating = (productId) => async (dispatch) => {
-  dispatch({ type: UPDATE_RATING, payload: productId });
-};
-
-const fetchReviews = (productId) => async (dispatch, getState) => {
+const setComment = (data) => async (dispatch) => {
   try {
-    dispatch({ type: GET_REVIEWS_REQUEST });
+    dispatch({ type: ADD_COMMENT, payload: data });
+  } catch (err) {
+    console.error(err.message);
+  }
+};
+
+const fetchComments = (productId) => async (dispatch) => {
+  try {
+    dispatch({ type: GET_COMMENTS_REQUEST });
     const { data } = await axios.get(
-      `http://localhost:3001/products/${productId}/review`
+      `/product/${productId}/comments`
     );
     dispatch({
-      type: GET_REVIEWS,
+      type: GET_COMMENTS,
       payload: data,
     });
-  } catch (error) {}
+  } catch (err) {
+    console.error(err.message)
+  }
 };
 
-export { setReview, fetchReviews, setRating, deleteReview, updateReview };
+export { setComment, fetchComments, deleteComment };

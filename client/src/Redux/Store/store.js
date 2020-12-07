@@ -7,6 +7,9 @@ import {
   categoryListReducer,
   categoryDetailsReducer,
 } from "../Categories/reducers/categoryReducers";
+import {
+  getCommentReducer
+} from "../Review/Reducers/reviewReducer";
 import thunk from "redux-thunk";
 
 const initialState = { };
@@ -17,6 +20,7 @@ const reducer = combineReducers({
   categoryList: categoryListReducer,
   categoryEdit: initialState,
   categoryDetails: categoryDetailsReducer,
+  commentList: getCommentReducer
 });
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 

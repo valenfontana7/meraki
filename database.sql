@@ -14,7 +14,7 @@ CREATE TABLE item(
     item_id SERIAL PRIMARY KEY,
     name VARCHAR(255),
     category_id INT,
-    description VARCHAR(255),
+    description TEXT,
     price INT,
     img VARCHAR(255),
     stock INT
@@ -27,3 +27,11 @@ CREATE TABLE item_comment(
     description VARCHAR(255),
     id_item INT
 );
+
+CREATE TABLE password_admin(
+    password_admin_id SERIAL PRIMARY KEY,
+    ps_code VARCHAR(30)
+);
+
+INSERT INTO password_admin (ps_code) 
+VALUES ('chulaycesar2016');

@@ -1,13 +1,6 @@
 .centrar {
   display: flex;
   justify-content: center;
-  padding-top: 50px;
-}
-@media (max-width: 576px) {
-  .centrar {
-    display: flex;
-    justify-content: center;
-    padding-top: 45px;
-    font-size: 23px;
-  }
+  padding-top: 120px;
+  padding-bottom: 30px;
 }

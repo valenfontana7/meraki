@@ -5,7 +5,7 @@ import {
   PRODUCT_DETAILS_REQUEST,
   PRODUCT_DETAILS_SUCCESS,
   PRODUCT_DETAILS_FAIL,
-  PRODUCT_LIST_FILTER,
+  //PRODUCT_LIST_FILTER,
 } from "../constantes/productConstants";
 
 function productListReducer(state = { products: [] }, action) {
@@ -22,14 +22,14 @@ function productListReducer(state = { products: [] }, action) {
         loading: false,
         error: action.payload,
       };
-    case PRODUCT_LIST_FILTER:
-      return {
-        products: state.products.filter(
-          (product) =>
-            product.name.includes(action.payload) ||
-            product.description.includes(action.payload)
-        ),
-      };
+    // case PRODUCT_LIST_FILTER:
+    //   return {
+    //     products: state.products.filter(
+    //       (product) =>
+    //         product.name.includes(action.payload) ||
+    //         product.description.includes(action.payload)
+    //     ),
+    //   };
     default:
       return state;
   }

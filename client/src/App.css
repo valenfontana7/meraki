@@ -1,14 +1,14 @@
+
 .sidebar {
     position: fixed;
     z-index: 1;
     transform: translateX(-17rem);
     width: 17rem;
-    background: #fffedd;
+    background: #fdfccb;
     height: 100%;
     transition: all 0.5s;
-    margin-top: 129px;
+    margin-top: 10%;
     box-shadow: 0.3px 2px 1px rgb(83, 83, 83);
-    z-index: 1;
   }
   .sidebar.open {
     transform: translateX(0);
@@ -20,40 +20,9 @@
     overflow-x: hidden;
   }
   .dropdown {
-    background: #e8d6fc;
+    background: #3a0353;
     box-shadow: 0.3px 0.3px 1px black;
     height: 200px;
     margin: 10px;
     border-radius: 10px;
   }
-  @media (max-width: 576px) {
-    .sidebar {
-      position: fixed;
-      z-index: 1;
-      transform: translateX(-17rem);
-      width: 14rem;
-      background: #ffbe7e;
-      height: 100%;
-      transition: all 0.5s;
-      margin-top: 117px;
-      box-shadow: 0.3px 2px 1px rgb(83, 83, 83);
-      z-index: 1;
-    }
-    .sidebar.open {
-      transform: translateX(0);
-    }
-    .scrollable-menu {
-      height: auto;
-      width: 70%;
-      max-height: 65px;
-      overflow-x: hidden;
-    }
-    .dropdown {
-      background: #f8e4ab;
-      box-shadow: 0.3px 0.3px 1px black;
-      height: 140px;
-      margin: 20px;
-      border-radius: 10px;
-    }
-  }
-  

@@ -9,17 +9,12 @@ import ProductComponent from "./container/productComponent.jsx";
 import HeaderInicio from "./components/headerInicio.jsx";
 import AdminPanel from "./container/adminPanel.jsx";
 import EditProduct from "./container/EditProduct.jsx";
-import ProductCategory from "./container/productCategory.jsx";
 import EditCategory from "./container/EditCategory.jsx";
-import Login from "./container/loginCont.jsx";
+import AdminLogin from "./container/loginCont.jsx";
 import Navbar from "./components/navBar.jsx";
-import store from "./Redux/Store/store.js";
-import { Provider } from "react-redux";
 
 export default function App() {
-  localStorage.setItem('user', { rol: 'admin'});
   return (
-    <Provider store={store}>
     <BrowserRouter>
       <Route path="/" render={() => <HeaderInicio />} />
       <Route path="/" render={() => <Navbar />} />
@@ -30,23 +25,18 @@ export default function App() {
             path="/admin"
             exact={true}
             render={() =>
-              JSON.parse(localStorage.getItem("user")) &&
-              JSON.parse(localStorage.getItem("user")).rol === "admin" ? (
-                <AdminPanel />
-              ) : (
-                (window.location = "/")
-              )
+              !localStorage.getItem("N4jQctA") ?
+                <AdminLogin /> : <AdminPanel />
             }
           />
           <Route
             path="/admin/products/add"
             exact={true}
             render={() =>
-              JSON.parse(localStorage.getItem("user")) &&
-              JSON.parse(localStorage.getItem("user")).rol === "admin" ? (
+              localStorage.getItem("N4jQctA") ? (
                 <FormProduct />
               ) : (
-                (window.location = "/")
+                (window.location = "/admin")
               )
             }
           />
@@ -54,11 +44,10 @@ export default function App() {
             path="/admin/categories/add"
             exact={true}
             render={() =>
-              JSON.parse(localStorage.getItem("user")) &&
-              JSON.parse(localStorage.getItem("user")).rol === "admin" ? (
+              localStorage.getItem("N4jQctA") ? (
                 <FormCategory />
               ) : (
-                (window.location = "/")
+                (window.location = "/admin")
               )
             }
           />
@@ -73,11 +62,10 @@ export default function App() {
             path="/admin/products/edit/:id"
             exact={true}
             render={(p) => {
-              return JSON.parse(localStorage.getItem("user")) &&
-                JSON.parse(localStorage.getItem("user")).rol === "admin" ? (
+              return localStorage.getItem("N4jQctA") ? (
                 <EditProduct producto={p} />
               ) : (
-                (window.location = "/")
+                (window.location = "/admin")
               );
             }}
           />
@@ -85,31 +73,15 @@ export default function App() {
             path="/admin/categories/edit/:id"
             exact={true}
             render={(p) => {
-              return JSON.parse(localStorage.getItem("user")) &&
-                JSON.parse(localStorage.getItem("user")).rol === "admin" ? (
+              return localStorage.getItem("N4jQctA") ? (
                 <EditCategory category={p} />
               ) : (
-                (window.location = "/")
+                (window.location = "/admin")
               );
-            }}
-          />
-          <Route
-            path="/products/categoria/:nombreCat"
-            exact={true}
-            render={(c) => {
-              return <ProductCategory nombrecat={c.match.params.nombreCat} />;
-            }}
-          />
-          <Route
-            path="/users/login"
-            exact={true}
-            render={(u) => {
-              return <Login u={u} />
             }}
           />
         </div>
       </main>
     </BrowserRouter>
-    </Provider>
   );
 }

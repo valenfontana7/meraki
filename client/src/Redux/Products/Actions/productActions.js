@@ -12,7 +12,7 @@ import axios from "axios";
 const listProduct = (keyword) => async (dispatch) => {
   if (!keyword || keyword.length === 1) {
     dispatch({ type: PRODUCT_LIST_REQUEST });
-    const { data } = await axios.get("http://localhost:3002/items/");
+    const { data } = await axios.get("/items/");
     dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data });
     if (!data) {
       dispatch({
@@ -23,7 +23,7 @@ const listProduct = (keyword) => async (dispatch) => {
   } else if (keyword) {
     dispatch({ type: PRODUCT_LIST_REQUEST });
     const { data } = await axios.get(
-      `http://localhost:3002/item/search?query=${keyword}`
+      `/search?query=${keyword}`
     );
     dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data });
     if (!data) {
@@ -35,6 +35,20 @@ const listProduct = (keyword) => async (dispatch) => {
   }
 };
 
+const listByCategory = (id) => async(dispatch) => {
+  dispatch({ type: PRODUCT_LIST_REQUEST });
+    const { data } = await axios.get(
+      `/catfilter?query=${id}`
+    );
+    dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data });
+    if (!data) {
+      dispatch({
+        type: PRODUCT_LIST_FAIL,
+        payload: "se ha producido un error",
+      });
+    }
+}
+
 const filterProduct = (keyword) => (dispatch) => {
   dispatch({ type: PRODUCT_LIST_FILTER, payload: keyword });
 };
@@ -43,7 +57,7 @@ const detailsProduct = (productId) => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_DETAILS_REQUEST, payload: productId });
     const { data } = await axios.get(
-      "http://localhost:3002/item/" + productId
+      "/item/" + productId
     );
     dispatch({ type: PRODUCT_DETAILS_SUCCESS, payload: data });
   } catch (error) {
@@ -53,10 +67,10 @@ const detailsProduct = (productId) => async (dispatch) => {
 
 const editProduct = (product) => async (dispatch) => {
   axios
-    .put(`http://localhost:3001/item/${product.id}`, {
+    .put(`/item/${product.item_id}`, {
       name: `${product.name}`,
       description: `${product.description}`,
-      category: `${product.category}`,
+      category_id: `${product.category_id}`,
       price: `${product.price}`,
       img: `${product.img}`,
       stock: `${product.stock}`,
@@ -67,4 +81,4 @@ const editProduct = (product) => async (dispatch) => {
   return (window.location = "http://localhost:3000/admin");
 };
 
-export { listProduct, detailsProduct, editProduct, filterProduct };
+export { listProduct, detailsProduct, editProduct, filterProduct, listByCategory };

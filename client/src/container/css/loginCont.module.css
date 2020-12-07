@@ -1,0 +1,22 @@
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 14%;
+}
+.login {
+    width: 35%;
+    height: 400px;
+    padding-top: 15%;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    font-family: "Architects Daughter";
+}
+
+.form {
+    padding: 40px;
+}

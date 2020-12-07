@@ -6,7 +6,7 @@
 }
 .container {
   width: 90%;
-  background: #fde195;
+  background: #fffedd;
   margin: 0 20px 0 20px;
   display: flex;
   padding: 30px;
@@ -65,12 +65,13 @@
 }
 .botonAdd {
   border-style: none;
+  font-family: "Architects Daughter";
   margin: 20px 0px 0px 30px;
-  background: #f7a14c;
+  background: #3a0353;
   border-radius: 10px;
   width: 100px;
   box-shadow: 0.3px 0.3px 1px rgb(68, 68, 68);
-  color: white;
+  color: #ffebb4;
 }
 .botonBack {
   border-style: none;

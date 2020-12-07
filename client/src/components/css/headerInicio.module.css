@@ -1,7 +1,7 @@
 .header {
   height: 96px;
   width: 100%;
-  background: #e9bbffa4;
+  background: #3a0353;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -14,16 +14,21 @@
 }
 .brand {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
 }
 .brand a {
-  font-size: 50px;
-  margin-right: 23px;
-  font-family: "Lobster", cursive;
-  color: white;
-  -webkit-text-stroke: 0.4px rgb(0, 0, 0);
+  font-size: 35px;
+  margin-left: 48px;
+  font-family: 'Architects Daughter', cursive;  
+  color: #ffebb4;
+  -webkit-text-stroke: 0.5px rgb(0, 0, 0);
   text-shadow: 0.3px 0.3px 1px rgb(14, 13, 13);
-  letter-spacing: 0.25rem;
+  text-decoration: none;
+}
+.brand a:last-of-type {
+  margin: 0;
+  font-size: 15px;
 }
 .brandButton {
   font-size: 2.5rem;
@@ -68,136 +73,4 @@
   border-radius: 50%;
   background: red;
   color: white;
-}
-
-@media (max-width: 576px) {
-  .header {
-    height: 83px;
-    width: 100%;
-    background: #fcb064;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    box-shadow: 0.3px 0.3px 1.2px rgb(119, 118, 118);
-    z-index: 1;
-  }
-  .brand {
-    margin-left: 13px;
-    display: flex;
-    flex-direction: column;
-  }
-  .brand a {
-    font-size: 25px;
-    font-family: "Lobster", cursive;
-    color: white;
-    -webkit-text-stroke: 0.2px rgb(0, 0, 0);
-    text-shadow: 0.3px 0.3px 0.3px rgb(14, 13, 13);
-    margin-right: 13px;
-    display: none;
-  }
-  .brand a:first-of-type {
-    display: flex;
-  }
-  .brand a:last-of-type {
-    display: flex;
-  }
-  .brandButton {
-    font-size: 1.4rem;
-    padding: 0.5rem;
-    background: none;
-    border: none;
-    color: #ffffff;
-    cursor: pointer;
-    margin-left: 20px;
-    max-height: 58%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 6px;
-    text-shadow: 0.3px 0.3px 1px rgb(0, 0, 0);
-  }
-  .botoncart {
-    margin: 5px 5px 5px 5px;
-  }
-  .cartboton {
-    width: 30px;
-    height: 30px;
-    background: white;
-    border-radius: 6px;
-    border-style: none;
-    box-shadow: 0.3px 0.3px 1px rgb(83, 83, 83);
-  }
-
-  .cartbotonimg {
-    width: 15px;
-    height: 15px;
-  }
-}
-@media (max-width: 360px) {
-  .header {
-    height: 83px;
-    width: 100%;
-    background: #fcb064;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    box-shadow: 0.3px 0.3px 1.2px rgb(119, 118, 118);
-    z-index: 1;
-  }
-  .brand {
-    margin-left: 13px;
-    display: flex;
-    flex-direction: column;
-  }
-  .brand a {
-    font-size: 25px;
-    font-family: "Lobster", cursive;
-    color: white;
-    -webkit-text-stroke: 0.2px rgb(0, 0, 0);
-    text-shadow: 0.3px 0.3px 0.3px rgb(14, 13, 13);
-    margin-right: 13px;
-    display: none;
-  }
-  .brand a:first-of-type {
-    display: flex;
-  }
-  .brand a:last-of-type {
-    display: flex;
-  }
-  .brandButton {
-    font-size: 1.4rem;
-    padding: 0.5rem;
-    background: none;
-    border: none;
-    color: #ffffff;
-    cursor: pointer;
-    margin-left: 20px;
-    max-height: 58%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 6px;
-    text-shadow: 0.3px 0.3px 1px rgb(0, 0, 0);
-  }
-  .botoncart {
-    margin: 5px 5px 5px -7px;
-  }
-  .cartboton {
-    width: 23px;
-    height: 23px;
-    background: white;
-    border-radius: 6px;
-    border-style: none;
-    box-shadow: 0.3px 0.3px 1px rgb(83, 83, 83);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .cartbotonimg {
-    width: 11px;
-    height: 11px;
-  }
 }

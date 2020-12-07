@@ -3,6 +3,7 @@ import sBar from "./css/sideBarComponent.module.css";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { listCategory } from "../Redux/Categories/Actions/categoryActions";
+import { listByCategory, listProduct } from "../Redux/Products/Actions/productActions";
 import SupervisorAccountIcon from "@material-ui/icons/SupervisorAccount";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import axios from "axios";
@@ -16,6 +17,19 @@ function SideBarComponent(props) {
     dispatch(listCategory());
   }, [dispatch]);
 
+  function logOut () {
+    return localStorage.removeItem('N4jQctA');
+  }
+
+  const catSearch = (e, id) => {
+    e.preventDefault();
+    if(id){
+      dispatch(listByCategory(id));
+    } else {
+      dispatch(listProduct());
+    }
+    
+  }
 
   return (
     <div>
@@ -26,17 +40,17 @@ function SideBarComponent(props) {
         </button>
 
         <div className={`${sBar.admin}`}>
-          {/* {JSON.parse(localStorage.getItem("user")) &&
-            JSON.parse(localStorage.getItem("user")).rol === "admin" && (
               <Link to="/admin">
                 <button onClick={props.onclose} className={` ${sBar.boton} `}>
                   <SupervisorAccountIcon className={sBar.imgBotones} />
                 </button>
               </Link>
-            )} */}
-          <button className={`${sBar.boton}`}>
+              {localStorage.getItem('N4jQctA') && (<button onClick={()=> {
+            logOut();
+            window.location = '/'
+          }} className={`${sBar.boton}`}>
             <ExitToAppIcon className={sBar.imgBotones} />
-          </button>
+          </button>)}
         </div>
         <div className="dropdown">
           <button
@@ -61,17 +75,20 @@ function SideBarComponent(props) {
                 Se produjo un error, por favor inténtelo de nuevo más tarde.
               </div>
             ) : (
-              categories.length > 0 &&
-              categories.map((cat) => (
-                <div key={cat.id}>
-                  <Link to={"/products/categoria/" + cat.name}>
-                    <button className={` dropdown-item`}>
+              categories.length > 0 && (
+                <div>
+              <button onClick={(e) => catSearch(e)} className={` dropdown-item`}>
+              <p className={sBar.botoncat}>Todos</p>
+            </button>
+            {categories.map((cat) => (
+                <div key={cat.category_id}>
+                    <button onClick={(e) => catSearch(e,cat.category_id)} className={` dropdown-item`}>
                       <p className={sBar.botoncat}>{cat.name}</p>
                     </button>
-                  </Link>
                 </div>
-              ))
-            )}
+              ))}
+            </div>
+            ))}
           </div>
         </div>
       </div>

@@ -1,11 +1,20 @@
-import React from 'react'
+import React from "react";
+import AddProduct from "./adminAddProduct.jsx";
+import AddCategory from "./adminAddCategory.jsx";
+import aPanel from "./css/adminPanel.module.css";
+import { Link } from "react-router-dom";
 
-function adminPanel() {
+class AdminPanel extends React.Component {
+  render() {
     return (
-        <div>
-            
+      <div className={`${aPanel.centrar}`}>
+        <div className={`container`}>
+          <AddCategory />
+          <AddProduct />
         </div>
-    )
+      </div>
+    );
+  }
 }
 
-export default adminPanel
+export default AdminPanel;

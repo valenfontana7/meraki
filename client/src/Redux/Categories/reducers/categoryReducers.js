@@ -10,7 +10,7 @@ import {
 
 function categoryListReducer(state = { categories: [] }, action) {
   const filter = (el) => {
-    return el.id !== action.payload;
+    return el.category_id !== action.payload;
   };
   switch (action.type) {
     case CATEGORY_LIST_REQUEST:

@@ -1,63 +1,36 @@
 import {
-  ADD_REVIEW,
-  GET_REVIEWS,
-  DELETE_REVIEW,
-  GET_REVIEWS_REQUEST,
-  UPDATE_REVIEW,
-  UPDATE_RATING,
+  ADD_COMMENT,
+  GET_COMMENTS,
+  DELETE_COMMENT,
+  GET_COMMENTS_REQUEST,
 } from "../Constants/reviewConstants";
 
-import axios from "axios";
-
-function getReviewReducer(state = { reviews: [] }, action) {
+function getCommentReducer(state = { comments: [] }, action) {
   const filter = (el) => {
-    return el.id !== action.payload;
+    return el.item_comment_id !== action.payload;
   };
   switch (action.type) {
-    case GET_REVIEWS_REQUEST:
+    case GET_COMMENTS_REQUEST:
       return {
-        loadingRev: true,
-        reviews: [],
+        loadingCom: true,
+        comments: [],
       };
-    case GET_REVIEWS:
+    case GET_COMMENTS:
       return {
-        reviews: action.payload,
-        loadingRev: false,
+        comments: action.payload,
+        loadingCom: false,
       };
-    case DELETE_REVIEW:
+    case DELETE_COMMENT:
       return (state = {
-        reviews: state.reviews.filter(filter),
+        comments: state.comments.filter(filter),
       });
-    case UPDATE_REVIEW:
-      const newReview = action.payload[0];
-      const oldReview = state.reviews.find(
-        (review) => review.id === newReview.id
-      );
-      return {
-        reviews: state.reviews.map((rev) => {
-          return rev.id === oldReview.id ? newReview : rev;
-        }),
-      };
-    case ADD_REVIEW:
+    case ADD_COMMENT:
       return (state = {
-        reviews: [...state.reviews, action.payload],
+        comments: [...state.comments, action.payload],
       });
-    case UPDATE_RATING:
-      axios
-        .put(`http://localhost:3001/products/${action.payload}`, {
-          rating:
-            state.reviews.reduce((acc, num) => {
-              return acc + num.star;
-            }, 0) / state.reviews.length,
-        })
-        .then((data) => {
-          console.log(data.data);
-          return data;
-        });
-      return state;
     default:
       return state;
   }
 }
 
-export { getReviewReducer };
+export { getCommentReducer };

@@ -26,16 +26,14 @@ function CatalogComponent() {
       ) : products.length > 0 ? (
         products.map((product) => {
           return (
-            <div key={product.id} className={cComponent.pCard}>
-              <div>
+            <div key={product.item_id} className={cComponent.pCard}>
                 <ProductCard producto={product} />
-              </div>
             </div>
           );
         })
       ) : (
         <div className={`alert alert-secondary ${cComponent.alerta}`}>
-          Oops! Parece que no hay productos, intenta creando uno.
+          Oops! Parece que no hay productos :(
         </div>
       )}
     </div>
