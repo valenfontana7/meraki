@@ -78,7 +78,7 @@ const editProduct = (product) => async (dispatch) => {
     .then((data) => {
       return data;
     });
-  return (window.location = "http://localhost:3000/admin");
+  return (window.location = "/admin");
 };
 
 export { listProduct, detailsProduct, editProduct, filterProduct, listByCategory };

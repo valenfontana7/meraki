@@ -42,7 +42,7 @@ const editCategory = (category, id) => async (dispatch) => {
         return data;
       });
     dispatch({ type: CATEGORY_EDIT_SUCCESS, payload: category });
-    return (window.location = "http://localhost:3000/admin");
+    return (window.location = "/admin");
   } catch (error) {
     dispatch({ type: CATEGORY_EDIT_FAIL, payload: error.message });
   }

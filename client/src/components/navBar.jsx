@@ -5,7 +5,7 @@ class Navbar extends React.Component {
   render() {
     return (
       <div className={`topnav ${navbar.navbar}`} id="myTopnav">
-        <a href="http://localhost:3000/" className={navbar.navbar_a}>
+        <a href="/" className={navbar.navbar_a}>
           Inicio
         </a>
         <a href="/" className={navbar.navbar_a}>

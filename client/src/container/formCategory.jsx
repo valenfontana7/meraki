@@ -25,7 +25,7 @@ export default function FormCategory() {
       .then((data) => {
         return data;
       });
-    return (window.location = "http://localhost:3000/admin");
+    return (window.location = "/admin");
   };
 
   return (
