@@ -70,7 +70,8 @@ export default function AdminAddProduct() {
                       {product.img && (
                         <img
                           className={cComponent.image}
-                          src={`/imagenes/uploads/${product.img}`}
+                          //src={`/imagenes/uploads/${product.img}`}
+                          src={product.img}
                           alt=" "
                         ></img>
                       )}

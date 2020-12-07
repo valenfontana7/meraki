@@ -16,9 +16,9 @@ export default function FormProducto() {
     img: "",
   });
 
-  const [image, setImage] = useState({
-    img: "",
-  });
+  // const [image, setImage] = useState({
+  //   img: "",
+  // });
 
   const [categories, setCategories] = useState([]);
 
@@ -47,7 +47,7 @@ export default function FormProducto() {
         description: `${input.description}`,
         category_id: `${input.category_id}`,
         price: `${input.price}`,
-        img: `${image.img}`,
+        img: `${input.img}`,//`${image.img}` ,
         stock: `${input.stock}`,
       })
       .then((data) => {
@@ -62,9 +62,9 @@ export default function FormProducto() {
     });
   }, []);
 
-  const UpdateImages = (newImages) => {
-    setImage({ img: newImages });
-  };
+  // const UpdateImages = (newImages) => {
+  //   setImage({ img: newImages });
+  // };
 
   return (
     <div className={cComponent.formPage}>
@@ -78,7 +78,8 @@ export default function FormProducto() {
         </div>
         <div className={cComponent.upload}>
           <h3>Añadir Producto</h3>
-          <FileUpload refreshFunction={UpdateImages} />
+           {/* <FileUpload refreshFunction={UpdateImages} />  */}
+           <input placeholder='Url de la Imagen' value={input.img} onChange={handleInputChange} type="text" name="img" id="img"/>
         </div>
         <form className={cComponent.form} onSubmit={handleSubmit}>
           <div className={cComponent.name}>

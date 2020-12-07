@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { setComment, fetchComments, deleteComment } from '../Redux/Review/Actions/reviewAction';
 import axios from 'axios';
 import DeleteIcon from '@material-ui/icons/Delete';
+var placeholder = "/imagenes/Placeholder.png";
 
 function ProductComponent(props) {
   const [comentario, setearComentario] = useState({
@@ -106,12 +107,17 @@ function ProductComponent(props) {
           <div className={`${cComponent.carritoPage}`}>
             <div className={`${cComponent.cards}`}>
               <div className={cComponent.stcolumn}>
-                <img
-                  className={`${cComponent.cardImage}`}
-                  src={`/imagenes/uploads/${productDet.img}`}
-                  alt=""
-                  lazyload="true"
-                />
+              {productDet.img ? (
+            <img
+              //src={`/imagenes/uploads/${productDet.img}`}
+              className={cComponent.cardImage}
+              src={productDet.img}
+              alt="productCompImage"
+              lazyload="true"
+            ></img>
+          ) : (
+            <img className={cComponent.cardImage} src={`${placeholder}`} alt="productCompImage"></img>
+          )}
                 <div className={`${cComponent.cardDet}`}>
                   {productDet.name}
                   <h4 className={cComponent.cardCat}>{productDet.category}</h4>

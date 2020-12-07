@@ -48,12 +48,12 @@ export default function EditProduct(props) {
     dispatch(editProduct(productInput));
   };
 
-  const UpdateImages = (newImages) => {
-    setProductInput({
-      ...productInput,
-      img: newImages,
-    });
-  };
+  // const UpdateImages = (newImages) => {
+  //   setProductInput({
+  //     ...productInput,
+  //     img: newImages,
+  //   });
+  // };
 
   // Peticion de producto y categoria
   useEffect(() => {
@@ -74,7 +74,8 @@ export default function EditProduct(props) {
         </div>
         <div className={cComponent.upload}>
           <h3>Modificar Producto</h3>
-          <FileUpload refreshFunction={UpdateImages} />
+          {/* <FileUpload refreshFunction={UpdateImages} /> */}
+          <input placeholder='Url de la Imagen' value={productInput.img} onChange={handleProductInputChange} type="text" name="img" id="img"/>
         </div>
         <form className={cComponent.form} onSubmit={handleSubmit}>
           <div className={cComponent.name}>

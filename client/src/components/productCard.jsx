@@ -15,7 +15,8 @@ function ProductCard(props) {
         <div className={pCard.image}>
           {props.producto.img ? (
             <img
-              src={`/imagenes/uploads/${props.producto.img}`}
+              //src={`/imagenes/uploads/${props.producto.img}`}
+              src={props.producto.img}
               alt=""
               lazyload="true"
             ></img>
