@@ -29,10 +29,10 @@ function ProductComponent(props) {
   const showComments = (e) => {
     e.preventDefault();
     dispatch(fetchComments(props.producto.match.params.id));
-    if(document.getElementById('comments').classList.contains('productComponent_hidden__TkuRH')){
-      document.getElementById('comments').classList.remove('productComponent_hidden__TkuRH');
+    if(document.getElementById('comments').classList.contains('hidden')){
+      document.getElementById('comments').classList.remove('hidden');
     } else {
-      document.getElementById('comments').classList.add('productComponent_hidden__TkuRH');
+      document.getElementById('comments').classList.add('hidden');
     }
   }
 
@@ -160,7 +160,7 @@ function ProductComponent(props) {
         )}
         
       </div>
-      <div id='comments' className={`container ${cComponent.hidden} ${cComponent.comments}`}>
+      <div id='comments' className={`container hidden ${cComponent.comments}`}>
         {msg !== [] && msg.map((msg, i) => (<div key={i} className="alert alert-success alert-dismissible fade show" role="alert">
             {msg}
         <button type="button" className="close" data-dismiss="alert" aria-label="Close">
