@@ -1,18 +1,17 @@
 /**Componente entero**/
 .bar {
   width: 105%;
-  height: 63px;
+  height: 45px;
   background: #fdfccb;
   border-radius: 15px;
   display: flex;
   align-items: center;
-  padding: 0px 0 0 6px;
+  padding: 6px;
   box-shadow: 0.3px 0.3px 1.5px rgb(83, 83, 83);
 }
 /**Boton**/
 .boton {
-  width: 42px;
-  height: 40px;
+  width: 15%;
   cursor: pointer;
   border-radius: 50px;
   border-style: none;
@@ -22,8 +21,7 @@
 }
 
 .search {
-  width: 240px;
-  height: 40px;
+  width: 100%;
   background: rgb(255, 255, 255);
   border-radius: 10px;
   border-style: none;
@@ -33,6 +31,7 @@
   padding-bottom: 5px;
   margin-left: 15px;
   margin-top: 2px;
+  margin-right: 5px;
 }
 .search:focus {
   box-shadow: 0.3px 0.3px 2px rgb(0, 0, 0);

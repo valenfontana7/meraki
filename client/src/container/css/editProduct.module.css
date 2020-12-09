@@ -2,7 +2,7 @@
   font-family: "Lato";
   display: flex;
   justify-content: center;
-  padding-top: 150px;
+  padding-top: 50px;
 }
 .container {
   width: 90%;
@@ -15,11 +15,11 @@
 }
 .form {
   height: 250px;
-  width: 400px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin-left: 200px;
+  margin-left: 20%;
 }
 .form input {
   border-style: none;
@@ -86,4 +86,41 @@
 .upload h3 {
   margin-left: 70px;
   margin-bottom: 20px;
+}
+@media(max-width: 930px) {
+  .form {
+    margin-left: 15%;
+  }
+}
+@media(max-width: 870px) {
+  .form {
+    margin-left: 12%;
+  }
+}
+@media(max-width: 845px) {
+  .form {
+    margin-left: 8%;
+  }
+}
+@media(max-width: 810px) {
+  .form {
+    margin-left: 0;
+  }
+}
+@media(max-width: 750px) {
+  .container {
+    flex-direction: column;
+  }
+  .formPage {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+  }
+}
+@media(max-width: 550px) {
+  .form {
+  font-size: small;  
+  flex-direction: column;
+  height: 100%;
+}
 }

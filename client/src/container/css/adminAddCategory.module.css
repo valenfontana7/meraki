@@ -2,13 +2,13 @@
   margin-top: 50px;
   border-bottom: 1px dotted #ccc;
   cursor: pointer;
-  padding: 20px;
+  padding: 2%;
   background: #fffedd;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   border-radius: 10px;
-  margin-right: 190px;
-  margin-left: 190px;
+  display: flex;
+  justify-content: center;
 }
 
 .actionpane {

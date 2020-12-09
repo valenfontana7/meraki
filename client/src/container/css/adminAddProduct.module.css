@@ -6,9 +6,9 @@
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   border-radius: 10px;
-  margin-right: 190px;
-  margin-left: 190px;
-  padding: 20px;
+  padding: 2%;
+  display: flex;
+  justify-content: center;
 }
 
 .actionpane {
@@ -30,7 +30,7 @@
   color: white;
 }
 .editar {
-  width: 70px;
+  width: 90%;
   height: 30px;
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
@@ -45,7 +45,7 @@
   color: rgb(83, 83, 83);
 }
 .borrar {
-  width: 70px;
+  width: 90%;
   height: 30px;
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
@@ -63,4 +63,34 @@
   max-height: 80px;
   border-radius: 5px;
   box-shadow: 0.3px 0.3px 1px black;
+}
+@media(max-width: 770px) {
+  .products {
+    font-size: small;
+  }
+  .buttonNew {
+    height: 25px;
+    font-size: small;
+  }
+}
+@media(max-width: 490px) {
+  .products {
+    font-size: x-small;
+  }
+  .editar {
+    font-size: small;
+  }
+  .borrar {
+    font-size: small;
+  }
+}
+@media(max-width: 450px) {
+  .editar {
+    font-size: x-small;
+    height: 25px;
+  }
+  .borrar {
+    font-size: x-small;
+    height: 25px;
+  }
 }

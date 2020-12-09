@@ -1,6 +1,6 @@
 /* BARRA LATERAL */
 .closeButton {
-  width: 1.5rem;
+  width: 10%;
   height: 1.5rem;
   border-radius: 15%;
   border-style: none;
@@ -73,7 +73,7 @@
 }
 .categories {
   display: flex;
-  width: 250px;
+  max-width: 10px;
   flex-direction: row;
   flex-wrap: wrap;
   margin-left: 10px;
@@ -81,8 +81,8 @@
   border-radius: 10px;
 }
 .filtro {
-  margin: 20px;
-  font-size: 18px;
+  margin: 7%;
+  font-size: 75%;
   font-weight: 400;
   border-style: none;
   background: #444444;
@@ -94,8 +94,7 @@
   border-style: none;
   border-radius: 10px;
   background: #ffffff;
-  font-size: 16px;
-  padding: 7px;
+  font-size: 60%;
   color: rgb(36, 35, 35);
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;

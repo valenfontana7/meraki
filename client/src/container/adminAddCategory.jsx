@@ -17,11 +17,12 @@ export default function AdminAddCategory() {
 
   return (
     <div className={cComponent.products} ng-app="app" ng-controller="AppCtrl">
-      <md-content layout-padding>
-        <div className={cComponent.actionpane}>
-          <Link to="/admin/categories/add">
+      <Link to="/admin/categories/add">
             <button className={cComponent.buttonNew}>Nueva Categoria</button>
           </Link>
+      <md-content layout-padding>
+        <div className={cComponent.actionpane}>
+          
           <center>
             <h2>Categorías</h2>
           </center>
@@ -29,7 +30,7 @@ export default function AdminAddCategory() {
 
         <div className="tables">
           <table
-            className={`table-responsive-xl col-xl mx-auto table-striped table-bordered table-hover table-checkable order-column dataTable`}
+            className={`table-responsive table-striped table-bordered table-hover table-checkable order-column dataTable`}
           >
             <thead>
               <tr>

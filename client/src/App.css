@@ -1,23 +1,22 @@
 
 .sidebar {
+  width: 200px;
     position: fixed;
+    top: 115px;
     z-index: 1;
-    transform: translateX(-17rem);
-    width: 17rem;
+    transform: translateX(-200px);
     background: #fdfccb;
     height: 100%;
     transition: all 0.5s;
-    margin-top: 10%;
     box-shadow: 0.3px 2px 1px rgb(83, 83, 83);
   }
   .sidebar.open {
     transform: translateX(0);
   }
   .scrollable-menu {
-    height: auto;
     max-height: 130px;
-    width: 187px;
     overflow-x: hidden;
+    max-width: 70px !important;
   }
   .dropdown {
     background: #3a0353;
@@ -25,6 +24,9 @@
     height: 200px;
     margin: 10px;
     border-radius: 10px;
+  }
+  .dropdown-menu {
+    max-width: 70px !important;
   }
   .hidden {
     display: none;

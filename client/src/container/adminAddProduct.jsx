@@ -29,7 +29,7 @@ export default function AdminAddProduct() {
         </div>
 
         <div className="tables">
-          <table className="table-responsive-xl col-xl mx-auto table-striped table-bordered table-hover table-checkable order-column dataTable">
+          <table className={`${cComponent.tabla} table-responsive mx-auto table-striped table-bordered table-hover table-checkable order-column dataTable`}>
             <thead>
               <tr>
                 <th>ID</th>

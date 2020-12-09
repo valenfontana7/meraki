@@ -1,25 +1,23 @@
 .header {
-  height: 96px;
+  height: 80px;
   width: 100%;
   background: #3a0353;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
   box-shadow: 0.3px 0.3px 1.2px rgb(119, 118, 118);
   z-index: 1;
 }
 .searchbar {
-  margin-right: 30px;
+  margin-right: 3%;
 }
 .brand {
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 .brand a {
-  font-size: 35px;
-  margin-left: 48px;
+  font-size: xx-large;
+  margin-left: 20%;
   font-family: 'Architects Daughter', cursive;  
   color: #ffebb4;
   -webkit-text-stroke: 0.5px rgb(0, 0, 0);
@@ -28,16 +26,16 @@
 }
 .brand a:last-of-type {
   margin: 0;
-  font-size: 15px;
+  font-size:  medium;
 }
 .brandButton {
-  font-size: 2.5rem;
+  font-size: 100%;
   padding: 0.5rem;
   background: none;
   border: none;
   color: #ffffff;
   cursor: pointer;
-  margin-left: 20px;
+  margin-left: 5%;
   max-height: 58%;
   display: flex;
   align-items: center;
@@ -73,4 +71,12 @@
   border-radius: 50%;
   background: red;
   color: white;
+}
+@media(max-width: 624px){
+  .brand a {
+    font-size: x-large;
+  }
+  .brand a:last-of-type {
+    font-size: small;
+  }
 }

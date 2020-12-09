@@ -220,7 +220,7 @@ function ProductComponent(props) {
                     <div className={cComponent.cuerpoComentario}>
                     <h5>No hay comentarios acerca de este producto aún, sé el primero. </h5>
                   </div>
-                  </div>)) : (<div className='btn-success'>Cargando...</div>)}
+                  </div>)) : (<div className='alert alert-success'>Cargando...</div>)}
             </div>
         </div>
     </div>
