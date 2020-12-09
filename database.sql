@@ -34,4 +34,6 @@ CREATE TABLE password_admin(
 );
 
 INSERT INTO password_admin (ps_code) 
-VALUES ('chulaycesar2016');
+VALUES ('');
+
+-- Arriba en VALUES, entre las comillas iría la contraseña de admin por defecto
